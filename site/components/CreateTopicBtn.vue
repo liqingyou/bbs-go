@@ -41,27 +41,29 @@ export default {
     },
     modules() {
       const modules = []
-      for (let i = 0; i < this.config.modules.length; i++) {
-        const item = this.config.modules[i]
-        if (item.enabled) {
-          const command = item.module
-          let icon = ''
-          let name = ''
-          if (item.module === 'tweet') {
-            icon = 'iconfont icon-tweet2'
-            name = '发动态'
-          } else if (item.module === 'topic') {
-            icon = 'iconfont icon-topic'
-            name = '发帖子'
-          } else if (item.module === 'article') {
-            icon = 'iconfont icon-article'
-            name = '发文章'
+      if (this.config.module) {
+        for (let i = 0; i < this.config.modules.length; i++) {
+          const item = this.config.modules[i]
+          if (item.enabled) {
+            const command = item.module
+            let icon = ''
+            let name = ''
+            if (item.module === 'tweet') {
+              icon = 'iconfont icon-tweet2'
+              name = '发动态'
+            } else if (item.module === 'topic') {
+              icon = 'iconfont icon-topic'
+              name = '发帖子'
+            } else if (item.module === 'article') {
+              icon = 'iconfont icon-article'
+              name = '发文章'
+            }
+            modules.push({
+              command,
+              icon,
+              name,
+            })
           }
-          modules.push({
-            command,
-            icon,
-            name,
-          })
         }
       }
       return modules
