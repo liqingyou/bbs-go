@@ -4,16 +4,10 @@
   "description": "bbs-go-site",
   "author": "https://mlog.club",
   "private": true,
-  "config": {
-    "nuxt": {
-      "host": "0.0.0.0",
-      "post": 3000
-    }
-  },
   "scripts": {
-    "dev": "nuxt -openssl-legacy-provider",
-    "build": "nuxt build -openssl-legacy-provider",
-    "start": "nuxt start -openssl-legacy-provider",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js"
