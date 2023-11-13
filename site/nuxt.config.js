@@ -2,7 +2,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   server: {
     host: '0.0.0.0',
-    port: 3000, // 或您想要使用的端口
+    port: 80, // 或您想要使用的端口
   },
   head: {
     htmlAttrs: {
